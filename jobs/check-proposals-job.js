@@ -8,7 +8,7 @@ const NewProposalMiliseconds = 1000 * 60 * 60 * 24 * 7;
 
 export default function checkProposalsJob() {
 	let isRunning = false;
-	const cronJob = new CronJob("0 * * * *", async () => {
+	const cronJob = new CronJob("* * * * *", async () => {
 		if (isRunning) {
 			console.log("checkProposalsJob is already running.");
 			return;
@@ -34,7 +34,13 @@ export default function checkProposalsJob() {
 async function processProposals(chain) {
 	try {
 		const lcdClient = new LcdClient(chain.lcd);
-		const proposals = await lcdClient.getProposals();
+		var proposals = [];
+		console.log("crawling proposals:", chain.name);
+		if (chain.govenanceVer === "v1") {
+			proposals = await lcdClient.getProposalsV1();
+		} else {
+			proposals = await lcdClient.getProposalsV1beta1();
+		}
 		for (const proposal of proposals) {
 			const existProposal = await database.getExistsProposal(
 				proposal.id,

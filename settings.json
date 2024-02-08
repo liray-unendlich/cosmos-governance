@@ -5,35 +5,40 @@
       "lcd": "https://sei-api.polkachu.com",
       "proposalUrl": "https://www.mintscan.io/sei/proposals/{id}",
       "binaryName": "seid",
-      "chainId": "pacific-1"
+      "chainId": "pacific-1",
+      "govenanceVer": "v1beta1"
     },
     {
       "name": "Zetachain",
       "lcd": "https://zeta.api.nodeshub.online:443",
       "proposalUrl": "https://www.mintscan.io/zetachain/proposals/{id}",
       "binaryName": "zetacored",
-      "chainId": "zetachain_7000-1"
+      "chainId": "zetachain_7000-1",
+      "govenanceVer": "v1"
     },
     {
       "name": "Dymension",
       "lcd": "https://dymension.api.kjnodes.com:443",
       "proposalUrl": "https://www.mintscan.io/dymension/proposals/{id}",
       "binaryName": "dymd",
-      "chainId": "dymension_1100-1"
+      "chainId": "dymension_1100-1",
+      "govenanceVer": "v1"
     },
     {
       "name": "Berachain",
       "lcd": "https://bera-testnet-rest.staketab.org:443",
       "proposalUrl": "https://artio.station.berachain.com/governance/proposal/{id}",
       "binaryName": "berad",
-      "chainId": "artio-80085"
+      "chainId": "artio-80085",
+      "govenanceVer": "v1"
     },
     {
       "name": "Xion",
       "lcd": "https://api.xion-testnet-1.burnt.com:443",
       "proposalUrl": "https://explorer.burnt.com/xion-testnet-1/gov/{id}",
       "binaryName": "xiond",
-      "chainId": "xion-testnet-1"
+      "chainId": "xion-testnet-1",
+      "govenanceVer": "v1"
     }
   ]
 }
