@@ -11,7 +11,7 @@
     {
       "name": "Zetachain",
       "lcd": "https://zeta.api.nodeshub.online:443",
-      "proposalUrl": "https://www.mintscan.io/zetachain/proposals/{id}",
+      "proposalUrl": "https://hub.zetachain.com/governance/proposal/{id}",
       "binaryName": "zetacored",
       "chainId": "zetachain_7000-1",
       "govenanceVer": "v1"
