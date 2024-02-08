@@ -8,7 +8,7 @@ const NewProposalMiliseconds = 1000 * 60 * 60 * 24 * 7;
 
 export default function checkProposalsJob() {
 	let isRunning = false;
-	const cronJob = new CronJob("0 * * * * *", async () => {
+	const cronJob = new CronJob("0 * * * *", async () => {
 		if (isRunning) {
 			console.log("checkProposalsJob is already running.");
 			return;
