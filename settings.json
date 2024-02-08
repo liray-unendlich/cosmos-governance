@@ -1,34 +1,41 @@
 {
   "chains": [
+    // Mainnet
     {
-      "name": "Evmos",
-      "lcd": "https://evmos-api.polkachu.com/",
-      "logoUrl": "https://pbs.twimg.com/profile_images/1595092806011191305/koqPJsUX_400x400.png",
-      "dcChannelId": "1035828716875563101",
-      "proposalUrl": "https://www.mintscan.io/evmos/proposals/{id}",
-      "binaryName": "evmosd",
-      "chainId": "evmos",
-      "embedColor": "#FF0000"
+      "name": "Sei",
+      "lcd": "https://sei-api.polkachu.com",
+      "proposalUrl": "https://www.mintscan.io/sei/proposals/{id}",
+      "binaryName": "seid",
+      "chainId": "pacific-1"
     },
     {
-      "name": "Okp4",
-      "lcd": "https://api.testnet.okp4.network/",
-      "logoUrl": "https://pbs.twimg.com/profile_images/1537721318191267840/GK12zUWJ_400x400.jpg",
-      "dcChannelId": "968040698546909184",
-      "proposalUrl": "https://explore.okp4.network/okp4%20testnet/gov/{id}",
-      "binaryName": "okp4d",
-      "chainId": "okp4-nemeton",
-      "embedColor": "#FF0000"
+      "name": "Zetachain",
+      "lcd": "https://zeta.api.nodeshub.online:443",
+      "proposalUrl": "https://www.mintscan.io/zetachain/proposals/{id}",
+      "binaryName": "zetacored",
+      "chainId": "zetachain_7000-1"
     },
     {
-      "name": "Quicksilver",
-      "lcd": "https://lcd-quicksilver.stakerun.com",
-      "logoUrl": "https://pbs.twimg.com/profile_images/1488798003473358848/V2gPwVeO_400x400.jpg",
-      "dcChannelId": "968040698546909184",
-      "proposalUrl": "https://scanrun.io/quicksilver/proposals/{id}",
-      "binaryName": "quicksilverd",
-      "chainId": "quicksilver-2",
-      "embedColor": "#FF0000"
+      "name": "Dymension",
+      "lcd": "https://dymension.api.kjnodes.com:443",
+      "proposalUrl": "https://www.mintscan.io/dymension/proposals/{id}",
+      "binaryName": "dymd",
+      "chainId": "dymension_1100-1"
+    },
+    // Testnet
+    {
+      "name": "Berachain",
+      "lcd": "https://bera-testnet-rest.staketab.org:443",
+      "proposalUrl": "https://artio.station.berachain.com/governance/proposal/{id}",
+      "binaryName": "berad",
+      "chainId": "artio-80085"
+    },
+    {
+      "name": "Xion",
+      "lcd": "https://api.xion-testnet-1.burnt.com:443",
+      "proposalUrl": "https://explorer.burnt.com/xion-testnet-1/gov/{id}",
+      "binaryName": "xiond",
+      "chainId": "xion-testnet-1"
     }
   ]
 }
