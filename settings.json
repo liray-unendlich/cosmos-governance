@@ -1,6 +1,5 @@
 {
   "chains": [
-    // Mainnet
     {
       "name": "Sei",
       "lcd": "https://sei-api.polkachu.com",
@@ -22,7 +21,6 @@
       "binaryName": "dymd",
       "chainId": "dymension_1100-1"
     },
-    // Testnet
     {
       "name": "Berachain",
       "lcd": "https://bera-testnet-rest.staketab.org:443",
