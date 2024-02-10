@@ -16,7 +16,7 @@ export async function sendMessageToTelegram(chatId, message) {
 
 export async function sendProposalToTelegram(proposal, chain) {
 	const cliMessage = `\`\`\`bash ${chain.binaryName} tx gov vote ${proposal.id} [yes/no/no_with_veto/abstain] --chain-id ${chain.chainId} --from [your_key_name]\`\`\``;
-	let messageText = `**${chain.name}で新しいプロポーザルが提案されました!**\n${proposal.title}\n${proposal.description}`;
+	let messageText = `------------------------------\n**${chain.name}で新しいプロポーザルが提案されました!**\n${proposal.title}\n${proposal.description}`;
 
 	// check the message length
 	if (messageText.length > 1024) {
