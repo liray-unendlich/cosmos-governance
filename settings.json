@@ -14,7 +14,7 @@
       "proposalUrl": "https://hub.zetachain.com/governance/proposal/{id}",
       "binaryName": "zetacored",
       "chainId": "zetachain_7000-1",
-      "govenanceVer": "v1beta1"
+      "govenanceVer": "v1"
     },
     {
       "name": "Dymension",
@@ -22,7 +22,7 @@
       "proposalUrl": "https://www.mintscan.io/dymension/proposals/{id}",
       "binaryName": "dymd",
       "chainId": "dymension_1100-1",
-      "govenanceVer": "v1beta1"
+      "govenanceVer": "v1"
     },
     {
       "name": "Berachain",
