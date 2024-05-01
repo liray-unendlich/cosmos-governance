@@ -43,6 +43,5 @@ export async function sendProposalToTelegram(proposal, chain) {
 	if (messageText.length > 1024) {
 		messageText = messageText.substring(0, 1024) + " ...";
 	}
-
 	await sendMessageToTelegram(TgChannelId, messageText);
 }
