@@ -52,7 +52,7 @@ async function processProposals(chain) {
 
 			// check proposal is new
 			if (proposal.submitTime.getTime() < Date.now() - NewProposalMiliseconds) {
-				console.log(`Proposal ${proposal.id} is too old.`);
+				console.log(`[${chain.name}]Proposal ${proposal.id} is too old.`);
 				continue;
 			}
 			await sendProposalToTelegram(proposal, chain);

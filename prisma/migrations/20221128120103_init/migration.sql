@@ -1,7 +1,0 @@
--- CreateTable
-CREATE TABLE "Proposal" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "proposalId" INTEGER NOT NULL,
-    "chain" TEXT NOT NULL
-);
