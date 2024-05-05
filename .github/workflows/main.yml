@@ -1,0 +1,54 @@
+name: Review configuration changes
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'settings.json'
+
+jobs:
+  pr-review:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4.1.4
+
+    - name: Install jq
+      run: sudo apt-get install jq
+
+    - name: Extract JSON diff
+      run: |
+        # PRのbaseとhead間の差分を取得
+        git diff HEAD^ HEAD -- 'data/**/*.json' > changes.diff
+        # 差分ファイルからJSONデータを抽出（例としてjqを使用）
+        cat changes.diff | jq . > extracted_data.json
+        
+    - name: Print extracted JSON
+      run: cat extracted_data.json
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'  # Pythonのバージョン指定
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+    
+    - name: Check API Response
+      run: |
+        import json
+        import requests
+        # Pull RequestからJSONデータを取得する部分を実装
+        data = 'ここに差分のJSONデータが格納されるコードを書く'
+        json_data = json.loads(data)
+        # LCD URLの取得とAPI呼び出し
+        lcd_url = json_data["lcd"] + "/cosmos/gov/v1/proposals?pagination.reverse=true"
+        response = requests.get(lcd_url)
+      
+      # 応答の確認
+      if response.status_code == 200:
+          print("API is responding correctly.")
+      else:
+          print(f"Failed to get a proper response, status code: {response.status_code}")
+          exit(1)
