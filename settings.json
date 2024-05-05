@@ -55,14 +55,6 @@
       "binaryName": "bbcored",
       "chainId": "bouncebit_6000-1",
       "govenanceVer": "v1"
-    },
-    {
-      "name": "test2",
-      "lcd": "https://bouncebit-rest.stakeme.pro:443",
-      "proposalUrl": "https://bbscan.io/proposal/{id}",
-      "binaryName": "bbcored",
-      "chainId": "bouncebit_6000-1",
-      "govenanceVer": "v1"
     }
   ]
 }
