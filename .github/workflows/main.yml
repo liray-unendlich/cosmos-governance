@@ -34,21 +34,4 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests
-    
-    - name: Check API Response
-      run: |
-        import json
-        import requests
-        # Pull RequestからJSONデータを取得する部分を実装
-        data = 'ここに差分のJSONデータが格納されるコードを書く'
-        json_data = json.loads(data)
-        # LCD URLの取得とAPI呼び出し
-        lcd_url = json_data["lcd"] + "/cosmos/gov/v1/proposals?pagination.reverse=true"
-        response = requests.get(lcd_url)
-      
-      # 応答の確認
-      if response.status_code == 200:
-          print("API is responding correctly.")
-      else:
-          print(f"Failed to get a proper response, status code: {response.status_code}")
-          exit(1)
+
